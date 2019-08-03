@@ -8,8 +8,8 @@ app.use(cors());
 app.use(bodyParser.json());
 routes(app);
 
-app.listen(9990, () => {
-    console.log('Started on port 9990');
+app.listen(process.env.PORT || 9990, () => {
+    console.log('Started on port ', process.env.PORT || 9990);
 });
 
 module.exports = app;
